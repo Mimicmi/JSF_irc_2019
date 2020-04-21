@@ -1,5 +1,5 @@
 # JSF_irc_2019
-Server NodeJS &amp; ExpressJS also using EJX for real chat application. Discord like for Epitech Project !
+Server NodeJS &amp; ExpressJS also using EJX for real chat application. Discord like for Epitech Project using websocket!
 
 ## NPM
 Install dependencies by running the following command
