@@ -5,10 +5,10 @@ const messageContainer = document.getElementById('message-container');
 const roomContainer = document.getElementById('room-container');
 
 if (messageForm != null) {
-    const name = prompt('Ton nom bb');
+    const name = prompt('Please write your nickname');
 
     /*When current user join room, add new user*/
-    appendMessage('Tu as rejoins les crados');
+    appendMessage('You joined the room');
     socket.emit('new-user', roomName, name);
 
 
@@ -25,8 +25,6 @@ if (messageForm != null) {
 }
 
 socket.on('room-created', room => {
-/*<div><%= room %></div>
-        <a href="/<%= room %>">Join</a>*/
     const roomElement = document.createElement('div');
 
     roomElement.innerText = room;
@@ -44,7 +42,7 @@ socket.on('chat-message', data => {
 
 /*Add randomizer variable to say different hello*/
 socket.on('user-connected', name => {
-    appendMessage(`${name} est dans la place`);
+    appendMessage(`${name} joined the room !`);
 });
 
 /*Delete user from array when user disconnect*/
